@@ -20,7 +20,7 @@ And then
 
 ```
 [Unit]
-Description=Errbot LosFuzzys
+Description=Errbot r3bot
 After=docker.service
 Requires=docker.service
 
