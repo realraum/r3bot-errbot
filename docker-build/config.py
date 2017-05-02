@@ -45,7 +45,7 @@ import logging
 BACKEND = os.environ.get('BACKEND', 'XMPP')
 
 #BOT_BASE_DIR = '/srv/data'
-BOT_BASE_DIR = os.environ.get('BOT_DATA_DIR', '.')
+BOT_BASE_DIR = os.environ.get('BOT_DATA_DIR', './docker-run')
 
 # The location where all of Err's data should be stored. Make sure to set
 # this to a directory that is writable by the user running the bot.

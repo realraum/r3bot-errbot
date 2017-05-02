@@ -89,6 +89,4 @@ ENV/
 .ropeproject
 
 # errbot stuff
-data
-ssl
-plugins
+docker-run
