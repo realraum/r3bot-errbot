@@ -53,13 +53,13 @@ RUN mkdir /srv/data /srv/plugins /srv/errbackends /app \
 USER $ERR_USER
 WORKDIR /srv
 
-COPY requirements.txt /app/requirements.txt
+COPY docker/requirements.txt /app/requirements.txt
 
 RUN virtualenv /app/venv
 RUN . /app/venv/bin/activate; pip install --no-cache-dir -r /app/requirements.txt
 
-COPY config.py /app/config.py
-COPY run.sh /app/venv/bin/run.sh
+COPY docker/config.py /app/config.py
+COPY docker/run.sh /app/venv/bin/run.sh
 
 EXPOSE 3141 3142
 VOLUME ["/srv"]
