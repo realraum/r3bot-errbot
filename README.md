@@ -5,9 +5,8 @@
 
 ## Configuration
 
-* Configuration via environment variables, see `config.py`.
+* Configuration via environment variables, see `config.py` and `env.list`
 * Configuration by adapting `config.py` (and lunching `run.sh` with it)
-
 
 ## Systemd
 
