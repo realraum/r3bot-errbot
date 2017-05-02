@@ -139,7 +139,7 @@ if 'BOT_PORT' in os.environ:
 
 # ssl
 if 'BOT_SSL' in os.environ:
-    BOT_IDENTITY['ssl'] = os.environ['BOT_SSL']
+    BOT_IDENTITY['ssl'] = bool(os.environ.get('BOT_SSL', True))
 
 # The identity, or credentials, used to connect to a server
 # BOT_IDENTITY = {
