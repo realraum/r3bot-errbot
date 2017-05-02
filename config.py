@@ -44,20 +44,23 @@ import logging
 
 BACKEND = os.environ.get('BACKEND', 'XMPP')
 
+#BOT_BASE_DIR = '/srv/data'
+BOT_BASE_DIR = os.environ.get('BOT_DATA_DIR', '.')
+
 # The location where all of Err's data should be stored. Make sure to set
 # this to a directory that is writable by the user running the bot.
-BOT_DATA_DIR = '/srv/data'
+BOT_DATA_DIR = BOT_BASE_DIR + '/data'
 
 # Set this to a directory on your system where you want to load extra
 # plugins from, which is useful mostly if you want to develop a plugin
 # locally before publishing it. Note that you can specify only a single
 # directory, however you are free to create subdirectories with multiple
 # plugins inside this directory.
-BOT_EXTRA_PLUGIN_DIR = '/srv/plugins'
+BOT_EXTRA_PLUGIN_DIR = BOT_BASE_DIR + '/plugins'
 
 # If you use an external backend as a plugin,
 # this is where you tell err where to find it.
-BOT_EXTRA_BACKEND_DIR = '/srv/errbackends'
+BOT_EXTRA_BACKEND_DIR = BOT_BASE_DIR + '/errbackends'
 
 # Should plugin dependencies be installed automatically? If this is true
 # then Err will use pip to install any missing dependencies automatically.
@@ -74,7 +77,7 @@ else:
 
 # The location of the log file. If you set this to None, then logging will
 # happen to console only.
-BOT_LOG_FILE = '/srv/err.log'
+BOT_LOG_FILE = BOT_BASE_DIR + '/err.log'
 
 # The verbosity level of logging that is done to the above logfile, and to
 # the console. This takes the standard Python logging levels, DEBUG, INFO,
