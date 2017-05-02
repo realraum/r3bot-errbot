@@ -39,6 +39,12 @@ WantedBy=multi-user.target
 ```
 
 
+## Plugin development
+
+* [errbot manual](http://errbot.io/en/latest/index.html#user-guide)
+* `pip install -r requirements.txt; errbot -T` (in this directory)
+
+
 ## Credits
 
 * Docker stuff based on [rroemhild/docker-errbot](https://github.com/rroemhild/docker-errbot)
