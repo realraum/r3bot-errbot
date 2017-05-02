@@ -5,6 +5,12 @@
 
 ## Configuration
 
+* `mkdir /opt/errbot/r3bot && cd $_`
+* `git clone https://github.com/realraum/r3bot-errbot.git .`
+* `mkdir ssl data plugins`
+
+And then
+
 * Configuration via environment variables, see `config.py` and `env.list`
 * Configuration by adapting `config.py` (and lunching `run.sh` with it)
 
