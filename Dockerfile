@@ -2,7 +2,9 @@
 
 FROM debian:jessie
 
-MAINTAINER Rafael Römhild <rafael@roemhild.de>
+MAINTAINER verr <verr@hack.more.systems>
+# based on https://github.com/rroemhild/docker-errbot
+
 
 ENV ERR_USER err
 ENV DEBIAN_FRONTEND noninteractive
