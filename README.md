@@ -5,10 +5,17 @@
 
 ## Configuration
 
+to clone the repo / buld the image:
+
 * `mkdir /opt/errbot/r3bot && cd $_`
 * `git clone https://github.com/realraum/r3bot-errbot.git .`
+
+
+and to create the volume:
+
 * `mkdir docker-run && cd $_`
 * `mkdir ssl data plugins`
+
 
 And then
 
@@ -27,7 +34,7 @@ Requires=docker.service
 
 [Service]
 WorkingDirectory=/opt/errbot/r3bot
-ExecStart=/opt/bin/systemd-docker run --rm --name r3bot-errbot -it -v ./docker-run:/srv --env-file ./env.list -e TZ=Europe/Vienna realraum/r3bot-errbot /app/venv/bin/run.sh -c /srv/config.py
+ExecStart=/opt/bin/systemd-docker run --rm --name r3bot-errbot -it -v docker-run:/srv --env-file ./env.list -e TZ=Europe/Vienna realraum/r3bot-errbot /app/venv/bin/run.sh -c /srv/config.py
 Restart=always
 RestartSec=10s
 Type=notify
