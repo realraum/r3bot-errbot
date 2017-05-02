@@ -20,7 +20,8 @@ After=docker.service
 Requires=docker.service
 
 [Service]
-ExecStart=/opt/bin/systemd-docker run --rm --name r3bot-errbot -it -v /opt/errbot/r3bot:/srv -e TZ=Europe/Vienna realraum/r3bot-errbot /app/venv/bin/run.sh -c /srv/config.py
+WorkingDirectory=/opt/errbot/r3bot
+ExecStart=/opt/bin/systemd-docker run --rm --name r3bot-errbot -it -v .:/srv --env-file ./env.list -e TZ=Europe/Vienna realraum/r3bot-errbot /app/venv/bin/run.sh -c /srv/config.py
 Restart=always
 RestartSec=10s
 Type=notify
